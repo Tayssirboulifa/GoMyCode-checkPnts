@@ -1,0 +1,35 @@
+ALGORITHM algorithm_name
+VAR
+    // Declare variables here
+    a: INTEGER;
+    b: INTEGER;
+    c: INTEGER;
+    sentence : STRING.
+
+BEGIN
+    a:=0;
+    b:=0;
+    c:=0;
+    // Read the sentence
+    Read(sentence);
+    sentence.toLower();
+    FOR i FROM 0 TO sentence.length STEP step  DO
+        a=a+1;
+        IF (sentence[i] = " ") THEN
+            b=b+1;
+        END_IF
+        IF (sentence[i] = "a" OR sentence[i] = "e" OR sentence[i] = "i" OR sentence[i] = "o" OR sentence[i] = "u") THEN
+            c=c+1;
+        END_IF
+    END_FOR
+    a = a - b;
+    // Print the length of the sentence 
+    Print(a);
+     Print("\n");
+    Print(b);
+     Print("\n");
+    Print(c);
+    Print("\n");
+
+    
+END
